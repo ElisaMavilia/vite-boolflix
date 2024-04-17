@@ -35,7 +35,10 @@ header{
     height: 90px;
     background-color: $blackprimary;
     color: $redboolfix;
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3000;
 #rigth-header{
     width: 30%;
 }    

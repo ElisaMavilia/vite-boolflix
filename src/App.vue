@@ -1,7 +1,10 @@
 <template>
+  <div id="#app">
   <HeaderComponent />
   <MainComponent />
   <FooterComponent />
+  </div>
+  
 </template>
 
 <script>
@@ -44,5 +47,10 @@ import FooterComponent from './components/FooterComponent.vue';
 </script>
 
 <style lang="scss" scoped>
+
+#app{
+  height: 100vh;
+  width: 100%;
+}
 
 </style>

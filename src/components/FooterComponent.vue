@@ -24,5 +24,6 @@ footer{
     height: 100px;
     background-color: $blackprimary;
     color: white;
+   
 }
 </style>
