@@ -1,11 +1,22 @@
 <template>
-    <div>
-
-    </div>
+    <header class="d-flex align-content-center align-items-center">
+        <div id="left-header" class="ps-4">
+            <h2>Boolflix</h2>
+        </div>
+        <div id="right-header" >
+            <form class="d-flex justify-content-between">
+                <div class="form-group me-4">
+                    <input type="text" class="form-control" id="entertext" placeholder="Insert your text">
+                 </div>
+                <div class="form-group"></div>
+                <button type="button" class="btn btn-danger ms-4">Search</button>
+            </form>
+        </div>
+    </header>
 </template>
 
 <script>
-import { store } from './store.js';
+import { store } from '/src/store.js';
     export default {
         name:'HeaderComponent',
         data(){
@@ -17,5 +28,32 @@ import { store } from './store.js';
 </script>
 
 <style lang="scss" scoped>
+@use '../assets/styles/partials/variables' as *;
+
+header{
+    width: 100%;
+    height: 90px;
+    background-color: $blackprimary;
+    color: $redboolfix;
+
+#rigth-header{
+    width: 30%;
+}    
+
+#left-header{
+    width: 70%;
+}   
+input{
+    background-color: $blackprimary;
+    color: white;
+}
+::placeholder{
+    color: lightgrey;
+}
+
+.btn-danger{
+    font-weight: 500;
+}
+}
 
 </style>
