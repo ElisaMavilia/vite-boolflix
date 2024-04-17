@@ -9,8 +9,9 @@ export const store = reactive ({
     options:{
         params: {
             api_key: 'fef663df583834922ff3702dcfcbbcb6',
-            query: 'a'
+            query: ''
         }
-    }
+    },
+    searchList: []
 
 });
