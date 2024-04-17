@@ -1,16 +1,17 @@
 <template>
-    <div>
-        <ul>
-            <li v-for="query in store.query" :key="query.id"></li>
-        </ul>
+    <div v-for="query in store" :key="query.id">
+        <CardComponent :id="query.id" :title="query.title" :original="query.original_title" :language="query.original_language" :rating="query.vote_average"/>
     </div>
 </template>
 
 <script>
 import { store } from '/src/store.js';
-
+import CardComponent from '../components/CardComponent.vue';
     export default {
         name: 'CardList',
+        components:{
+            CardComponent,
+        },
         data(){
             return {
             store
