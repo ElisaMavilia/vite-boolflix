@@ -1,9 +1,9 @@
 <template>
     <div>
-        <h5>{{ title }}</h5>
+       <h5>{{ title }}</h5>
         <div>{{ original }}</div>
         <div>{{ language }}</div>
-        <div>{{ rating }}</div>
+        <div>{{ rating }}</div> 
     </div>
 </template>
 

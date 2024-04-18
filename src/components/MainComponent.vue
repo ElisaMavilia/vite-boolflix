@@ -1,19 +1,18 @@
 <template>
     <main>
+        Main
       <CardList />
-      <CardComponent />
+      <CardList />
     </main>
 </template>
 
 <script>
 import { store } from '/src/store.js';
 import CardList from '../components/CardList.vue';
-import CardComponent from '../components/CardComponent.vue';
     export default {
         name: 'MainComponent',
         components: {
             CardList,
-            CardComponent,
     },
         data(){
             return {
@@ -29,6 +28,6 @@ import CardComponent from '../components/CardComponent.vue';
 main{
     width: 100%;
     height: calc(100% - 190px);
-    margin-top: 100px;
+    padding: 100px 0;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
-    <div v-for="query in store" :key="query.id">
-        <CardComponent :id="query.id" :title="query.title" :original="query.original_title" :language="query.original_language" :rating="query.vote_average"/>
+    <div v-for="movies in store.movies" :key="movies.id">
+        <CardComponent :id="movies.id" :title="movies.title" :original="movies.original_title" :language="movies.original_language" :rating="movies.vote_average"/>
     </div>
 </template>
 

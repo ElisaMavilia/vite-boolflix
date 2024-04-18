@@ -6,7 +6,7 @@
         <div id="right-header" >
             <form class="d-flex justify-content-between">
                 <div class="form-group me-4">
-                    <input type="text" class="form-control" id="entertext" placeholder="Insert your text" v-model="store.options.params.query " @keyup.enter> <!-- {{ movie.title }} -->
+                    <input type="text" class="form-control" id="entertext" placeholder="Insert your text" v-model.trim="store.options.params.query " @keyup.enter="titleSearch">
                  </div>
                 <div class="form-group"></div>
                 <button type="button" class="btn btn-danger ms-4" @click="$emit ('titleSearch')" >Search</button>
