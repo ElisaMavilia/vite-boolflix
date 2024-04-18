@@ -1,10 +1,15 @@
 <template>
-    <div>
-       <h5>{{ title }}</h5>
-        <div>{{ original }}</div>
-        <div>{{ language }}</div>
-        <div>{{ rating }}</div> 
-    </div>
+
+            <img src="..." class="card-img-top" alt="...">
+            <div class="card-body">
+            <h5 class="card-title">{{ title }}</h5>
+            <span class="card-text">{{ original }}</span>
+            <small>{{ language }}</small>
+            <small>{{ rating }}</small>
+
+        </div>
+       
+</div>
 </template>
 
 <script>

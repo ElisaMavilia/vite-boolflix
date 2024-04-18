@@ -12,8 +12,6 @@ import axios from 'axios';
 import { store } from '/src/store.js';
 import HeaderComponent from './components/HeaderComponent.vue';
 import MainComponent from './components/MainComponent.vue';
-/* import CardList from './components/CardList.vue';
-import CardComponent from './components/CardComponent.vue'; */
 import FooterComponent from './components/FooterComponent.vue';
 
   export default {

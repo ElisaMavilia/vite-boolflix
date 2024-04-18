@@ -1,7 +1,24 @@
 <template>
-    <div v-for="movies in store.movies" :key="movies.id">
-        <CardComponent :id="movies.id" :title="movies.title" :original="movies.original_title" :language="movies.original_language" :rating="movies.vote_average"/>
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3" v-for="movies in store.movies" :key="movies.id">
+      
+            <CardComponent :id="movies.id" :title="movies.title" :original="movies.original_title" :language="movies.original_language" :rating="movies.vote_average"/>
+            </div>
+            </div>
     </div>
+   
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-12 col-md-6 col-lg-3" v-for="tv in store.tv" :key="tv.id">
+      
+            <CardComponent :id="tv.id" :title="tv.title" :original="tv.original_title" :language="tv.original_language" :rating="tv.vote_average"/>
+            </div>
+            </div>
+    </div>
+
+  
+    
 </template>
 
 <script>

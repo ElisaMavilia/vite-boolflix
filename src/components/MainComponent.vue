@@ -1,7 +1,8 @@
 <template>
     <main>
-        Main
+    <h2>MOVIES</h2>
       <CardList />
+      <h2>TV SHOWS</h2>
       <CardList />
     </main>
 </template>
