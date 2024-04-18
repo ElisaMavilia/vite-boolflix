@@ -36,7 +36,7 @@ import FooterComponent from './components/FooterComponent.vue';
   
       },
       getSeries(){
-        axios.get(this.store.apiUrl + this.store.endPoint.tv, this.store.options).then((res) => {
+        axios.get(this.store.apiUrl + this.store.endPoint.serie, this.store.options).then((res) => {
           this.store.tv = res.data.results;
           console.log("query tv:", this.store.tv);
         })

@@ -4,7 +4,7 @@ export const store = reactive ({
     apiUrl: 'https://api.themoviedb.org/3/',
     endPoint: {
         movie: 'search/movie',
-        tv: 'search/movie'
+        serie: 'search/tv'
     },
     options:{
         params: {
@@ -12,8 +12,8 @@ export const store = reactive ({
             query: ''
         }
     },
-    imageUrl: "https://image.tmdb.org/t/p/original",
-    img: "poster_path",
+    imageUrl: "https://image.tmdb.org/t/p/original/",
+    
     movies: [],
     tv: []
 
