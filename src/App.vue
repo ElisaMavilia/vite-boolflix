@@ -43,9 +43,6 @@ import FooterComponent from './components/FooterComponent.vue';
       },
 
       getData(){
-      
-        /* this.store.movies = this.store.options.params.query;
-        this.store.tv = this.store.options.params.query; */
         this.getMovies();
         this.getSeries();
       console.log("store", store);
@@ -59,10 +56,5 @@ import FooterComponent from './components/FooterComponent.vue';
 </script>
 
 <style lang="scss" scoped>
-
-#app{
-  height: 100vh;
-  width: 100%;
-}
 
 </style>
