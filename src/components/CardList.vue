@@ -1,10 +1,10 @@
 <template>
     <div class="container">
-        <h2 :class="{'active': !showElement ? }" >Movie</h2>
+        <h2 v-if="store.movies === true">Movie</h2>
       <!--  {{ store.movies }} -->
         <div class="row g-4">
+           
             <div class="col-12 col-md-6 col-lg-3" v-for="movies in store.movies" :key="movies.id">
-      
             <CardComponent :id="movies.id" :title="movies.title" :original="movies.original_title" :language="movies.original_language" :rating="movies.vote_average" :img="movies.poster_path"/>
         </div>
             </div>
@@ -18,9 +18,6 @@
             </div>
         </div>
     </div>
-
-  
-    
 </template>
 
 <script>
@@ -37,9 +34,7 @@ import CardComponent from '../components/CardComponent.vue';
             showElements: false,
         }
     },
-    methods:{
-       
-    }
+    
     }
 </script>
 
@@ -49,6 +44,4 @@ import CardComponent from '../components/CardComponent.vue';
 .active{
     display: none;
 }
-
-
 </style>
