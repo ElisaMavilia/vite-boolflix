@@ -1,20 +1,23 @@
 <template>
-            <div class="card">
-                <img v-if="img" :src="store.imageUrl+img" class="card-img-top" :alt="title">
-                <img v-else src="/images/placeholder-movies.png" alt="placeholder movies">
-            <div class="card-body">
-                <h5 class="card-title">{{ title || name }}</h5><br>
-                <span class="card-text">{{ original }}</span><br>
-               
-                <small>{{ rating }}</small><br>
-                <div class="flag pt-3">
-                    <img :src="imgFlag" :alt="language + 'flag'">
-                </div><br>
-
-                <div class="star">
-                    <i :class="{'fa-solid' : n <= starVote, 'fa-regular' : n > starVote }" class="fa-star" v-for="n in 5"></i>
+            <div class="flip-card">
+                <div class="flip-card-inner">
+                    <div class="flip-card-front">
+                        <img v-if="img" :src="store.imageUrl+img" class="card-img-top" :alt="title">
+                        <img v-else src="/images/placeholder-movies.png" alt="placeholder movies">
+                    </div>
+                
+                    <div class="flip-card-back">
+                        <h5 class="card-title">{{ title || name }}</h5><br>
+                        <span class="card-text">{{ original }}</span><br>
+                        <small>{{ rating }}</small><br>
+                        <div class="flag pt-3">
+                            <img :src="imgFlag" :alt="language + 'flag'">
+                        </div><br>
+                        <div class="star">
+                        <i :class="{'fa-solid' : n <= starVote, 'fa-regular' : n > starVote }" class="fa-star" v-for="n in 5"></i>
+                        </div>
+                    </div>
                 </div>
-            </div>
             </div>
 </template>
 
@@ -57,6 +60,8 @@ import { store } from '/src/store.js';
 </script>
 
 <style lang="scss" scoped>
+
+
    .flag {
     img{
     height: 35px;
@@ -67,5 +72,43 @@ import { store } from '/src/store.js';
    .fa-star{
     color: gold;
    }
+
+   .flip-card {
+  background-color: transparent;
+  aspect-ratio: 1/1.5;
+  perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* text-align: center; */
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
    
 </style>

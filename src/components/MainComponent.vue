@@ -27,6 +27,6 @@ import CardList from '../components/CardList.vue';
 main{
     width: 100%;
     height: calc(100% - 190px);
-    padding: 100px 0;
+    padding: 180px 0;
 }
 </style>
