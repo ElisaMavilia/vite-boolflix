@@ -9,6 +9,10 @@
                 <div class="flag pt-3">
                     <img :src="imgFlag" :alt="language + 'flag'">
                 </div><br>
+
+                <div class="star">
+                    <i :class="{'fa-solid' : n <= starVote, 'fa-regular' : n > starVote }" class="fa-star" v-for="n in 5"></i>
+                </div>
             </div>
             </div>
 </template>
@@ -26,6 +30,9 @@ import { store } from '/src/store.js';
             ]
         }
     },
+    method(){
+       
+    },
     computed: {
         imgFlag(){
             if(this.flags.includes(this.language)){
@@ -33,7 +40,10 @@ import { store } from '/src/store.js';
             }else{
                 return '/images/placeholder.png'
             }
-        }
+        },
+        starVote(){
+            return Math.ceil(this.rating / 2);       
+         }
     }
     }
 </script>
@@ -45,6 +55,9 @@ import { store } from '/src/store.js';
     display: block;
     border-radius: 50%;
    }
+   }
+   .fa-star{
+    color: gold;
    }
    
 </style>
