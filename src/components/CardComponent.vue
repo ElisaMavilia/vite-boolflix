@@ -6,8 +6,8 @@
                 <span class="card-text">{{ original }}</span><br>
                
                 <small>{{ rating }}</small><br>
-                <div class="flag">
-                    <img :src="`/images/${language}.png`" :alt="language + 'flag'">
+                <div class="flag pt-3">
+                    <img :src="imgFlag" :alt="language + 'flag'">
                 </div><br>
             </div>
             </div>
@@ -20,17 +20,31 @@ import { store } from '/src/store.js';
         props: ['id', 'title', 'original', 'language', 'rating', 'img', 'name', 'flag'],
         data(){
             return {
-            store
+            store,
+            flags: [
+                'en', 'it', 'ja', 'se'
+            ]
+        }
+    },
+    computed: {
+        imgFlag(){
+            if(this.flags.includes(this.language)){
+                return `/images/${this.language}.png`;
+            }else{
+                return '/images/placeholder.png'
+            }
         }
     }
     }
 </script>
 
 <style lang="scss" scoped>
-   .flag img{
-    width: 40px;
-    height: 40px;
+   .flag {
+    img{
+    height: 35px;
     display: block;
     border-radius: 50%;
    }
+   }
+   
 </style>

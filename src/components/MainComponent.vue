@@ -1,6 +1,6 @@
 <template>
     <main>
-      <CardList title="Movies" :list="store.movie"/>
+      <CardList/>
      <!--   -->
     </main>
 </template>
