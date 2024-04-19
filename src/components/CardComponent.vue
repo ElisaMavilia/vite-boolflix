@@ -106,10 +106,12 @@ import { store } from '/src/store.js';
 }
 p{
     font-size: 1em;
+    padding-top: 10px;
 }
 
 h5{
-    font-size: 1em;
+    font-size: 1.5em;
+    font-weight: 600;
 }
    
 </style>
