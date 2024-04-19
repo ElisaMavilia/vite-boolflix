@@ -6,7 +6,7 @@
                         <img v-else src="/images/placeholder-movies.png" alt="placeholder movies">
                     </div>
                 
-                    <div class="flip-card-back px-5 py-5">
+                    <div class="flip-card-back px-5 py-3">
                         <h5 class="card-title">{{ title || name }}</h5><br>
                         <span class="card-text"><em>{{ original }}</em></span><br>
                         <div class="flag pt-3">
@@ -14,6 +14,7 @@
                         </div><br>
                         <div class="star">
                         <i :class="{'fa-solid' : n <= starVote, 'fa-regular' : n > starVote }" class="fa-star" v-for="n in 5"></i>
+                        <p>{{ plot }}</p>
                         </div>
                     </div>
                 </div>
@@ -24,7 +25,7 @@
 import { store } from '/src/store.js';
     export default {
         name: 'CardComponent',
-        props: ['id', 'title', 'original', 'language', 'rating', 'name', 'flag', 'img'],
+        props: ['id', 'title', 'original', 'language', 'rating', 'name', 'flag', 'img', 'plot'],
         data(){
             return {
             store,
@@ -69,7 +70,7 @@ import { store } from '/src/store.js';
 .flip-card {
     background-color: transparent;
     aspect-ratio: 1/1.5;
-    erspective: 1000px;
+    perspective: 1000px;
     }
 
 .flip-card-inner {
@@ -101,6 +102,14 @@ import { store } from '/src/store.js';
   background-color: rgba(0, 0, 0, 0.625);
   color: white;
   transform: rotateY(180deg);
+  overflow-y: auto;
+}
+p{
+    font-size: 1em;
+}
+
+h5{
+    font-size: 1em;
 }
    
 </style>
