@@ -1,6 +1,7 @@
 <template>
             <div class="card">
-                <img :src="store.imageUrl+img" class="card-img-top" :alt="title">
+                <img v-if="img" :src="store.imageUrl+img" class="card-img-top" :alt="title">
+                <img v-else src="/images/placeholder-movies.png" alt="placeholder movies">
             <div class="card-body">
                 <h5 class="card-title">{{ title || name }}</h5><br>
                 <span class="card-text">{{ original }}</span><br>
@@ -21,19 +22,20 @@
 import { store } from '/src/store.js';
     export default {
         name: 'CardComponent',
-        props: ['id', 'title', 'original', 'language', 'rating', 'img', 'name', 'flag'],
+        props: ['id', 'title', 'original', 'language', 'rating', 'name', 'flag', 'img'],
         data(){
             return {
             store,
             flags: [
                 'en', 'it', 'ja', 'se'
-            ]
+            ],
         }
     },
     method(){
        
     },
     computed: {
+
         imgFlag(){
             if(this.flags.includes(this.language)){
                 return `/images/${this.language}.png`;
@@ -41,11 +43,17 @@ import { store } from '/src/store.js';
                 return '/images/placeholder.png'
             }
         },
+
         starVote(){
             return Math.ceil(this.rating / 2);       
-         }
-    }
-    }
+        },
+        
+       
+    },
+
+    
+    
+}
 </script>
 
 <style lang="scss" scoped>
