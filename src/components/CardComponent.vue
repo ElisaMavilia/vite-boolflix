@@ -1,15 +1,14 @@
 <template>
-            <div class="flip-card">
+            <div class="flip-card mb-4">
                 <div class="flip-card-inner">
                     <div class="flip-card-front">
                         <img v-if="img" :src="store.imageUrl+img" class="card-img-top" :alt="title">
                         <img v-else src="/images/placeholder-movies.png" alt="placeholder movies">
                     </div>
                 
-                    <div class="flip-card-back">
+                    <div class="flip-card-back px-5 py-5">
                         <h5 class="card-title">{{ title || name }}</h5><br>
-                        <span class="card-text">{{ original }}</span><br>
-                        <small>{{ rating }}</small><br>
+                        <span class="card-text"><em>{{ original }}</em></span><br>
                         <div class="flag pt-3">
                             <img :src="imgFlag" :alt="language + 'flag'">
                         </div><br>
@@ -43,7 +42,7 @@ import { store } from '/src/store.js';
             if(this.flags.includes(this.language)){
                 return `/images/${this.language}.png`;
             }else{
-                return '/images/placeholder.png'
+                return '/images/placeholder.png';
             }
         },
 
@@ -106,7 +105,7 @@ import { store } from '/src/store.js';
 }
 
 .flip-card-back {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.625);
   color: white;
   transform: rotateY(180deg);
 }
