@@ -39,6 +39,7 @@ header{
     top: 0;
     left: 0;
     z-index: 3000;
+    border-bottom: 1px solid grey;
 
 #rigth-header{
     width: 30%;

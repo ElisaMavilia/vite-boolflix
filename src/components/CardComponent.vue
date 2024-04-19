@@ -49,20 +49,14 @@ import { store } from '/src/store.js';
         starVote(){
             return Math.ceil(this.rating / 2);       
         },
-        
-       
     },
-
-    
-    
 }
 </script>
 
 <style lang="scss" scoped>
 
-
-   .flag {
-    img{
+ .flag {
+ img{
     height: 35px;
     display: block;
     border-radius: 50%;
@@ -72,17 +66,16 @@ import { store } from '/src/store.js';
     color: gold;
    }
 
-   .flip-card {
-  background-color: transparent;
-  aspect-ratio: 1/1.5;
-  perspective: 1000px;
-}
+.flip-card {
+    background-color: transparent;
+    aspect-ratio: 1/1.5;
+    erspective: 1000px;
+    }
 
 .flip-card-inner {
   position: relative;
   width: 100%;
   height: 100%;
-  /* text-align: center; */
   transition: transform 0.8s;
   transform-style: preserve-3d;
 }

@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <h2 :class="{'active': !showElement ? }" >Movie</h2>
       <!--  {{ store.movies }} -->
         <div class="row g-4">
             <div class="col-12 col-md-6 col-lg-3" v-for="movies in store.movies" :key="movies.id">
@@ -32,13 +33,22 @@ import CardComponent from '../components/CardComponent.vue';
         },
         data(){
             return {
-            store
+            store,
+            showElements: false,
         }
+    },
+    methods:{
+       
     }
     }
 </script>
 
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
+
+.active{
+    display: none;
+}
+
 
 </style>
