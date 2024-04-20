@@ -1,9 +1,6 @@
 <template>
-  <div id="#app">
   <HeaderComponent @titleSearch = "getData"/>
   <MainComponent />
-  </div>
-  
 </template>
 
 <script>
@@ -56,5 +53,11 @@ import FooterComponent from './components/FooterComponent.vue';
 </script>
 
 <style lang="scss" scoped>
-
+#my-video {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  min-width: 100%; 
+  min-height: 100%;
+}
 </style>

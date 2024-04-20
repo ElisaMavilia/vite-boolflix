@@ -96,6 +96,8 @@ import { store } from '/src/store.js';
 .flip-card-front {
   background-color: #bbb;
   color: black;
+  overflow: hidden;
+  object-fit: cover;
 }
 
 .flip-card-back {

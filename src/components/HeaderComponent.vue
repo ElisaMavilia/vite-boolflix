@@ -1,12 +1,12 @@
 <template>
     <header class="d-flex align-content-center align-items-center">
         <div id="left-header" class="ps-4">
-            <h2>Boolflix</h2>
+            <h2 class="text-uppercase">Boolflix</h2>
         </div>
         <div id="right-header" >
             <form class="d-flex justify-content-between">
                 <div class="form-group me-4">
-                    <input type="text" class="form-control" id="entertext" placeholder="Insert your text" v-model.trim="store.options.params.query " @keyup.enter="titleSearch">
+                    <input type="text" class="form-control" id="entertext" placeholder="Search something" v-model.trim="store.options.params.query " @keyup.enter="$emit ('titleSearch')"/>
                  </div>
                 <div class="form-group"></div>
                 <button type="button" class="btn btn-danger ms-4" @click="$emit ('titleSearch')" >Search</button>
