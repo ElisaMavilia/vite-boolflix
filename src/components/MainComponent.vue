@@ -14,6 +14,17 @@
                     <button type="button" class="btn btn-danger mx-4 " >Get Started</button>
                 </form>
             </div>
+
+        <section id="section-down" class="d-flex">
+            <div id="section-down-left-text" class="text-light">
+                <h2>Enjoy on your TV.</h2>
+                <h4>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h4>
+            </div>
+            <div>
+                <video id="section-down-video" src="../assets/video/netflix-lite.mov" autoplay loop muted playsinline></video>
+            </div>
+
+        </section>
             
         </section>
      
@@ -39,10 +50,10 @@ import CardList from '../components/CardList.vue';
 <style lang="scss" scoped>
 @use '../assets/styles/partials/variables' as *;
 
-main{
-    width: 100%;
-    height: calc(100% - 190px);
-    padding: 180px 0;
+main {
+  width: 100%;
+  height: calc(100% - 190px);
+  background-color: $blackprimary;
 }
 
 #section-up {
@@ -52,6 +63,7 @@ main{
   background-image: url(../assets/img/netflix-background.jpg);
   background-size: cover;
   background-position: center;
+  border-bottom: 3px solid rgba(211, 211, 211, 0.398);
 }
 
 #section-up::before {
@@ -61,11 +73,10 @@ main{
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6); /* Colore nero con trasparenza al 50% */
+  background-color: rgba(0, 0, 0, 0.6); /* Colore nero con trasparenza al 60% */
   z-index: 1;
 }
 
-/* Posiziona l'elemento interno di #section-up sia sopra l'overlay */
 #section-up > * {
   position: relative;
   z-index: 2;
@@ -74,10 +85,29 @@ main{
 #section-up-text {
   width: 100%;
   height: 100%;
+  padding-top: 100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: white;
+  text-align: center; 
 }
+
+#section-down-video {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $blackprimary;
+}
+
+#section-down-video video {
+  width: 30%; 
+  max-width: 200px; 
+  height: auto; 
+  object-fit: cover;
+}
+
 </style>
