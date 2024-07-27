@@ -71,6 +71,7 @@ import { store } from '/src/store.js';
     background-color: transparent;
     aspect-ratio: 1/1.5;
     perspective: 1000px;
+    cursor: pointer;
     }
 
 .flip-card-inner {

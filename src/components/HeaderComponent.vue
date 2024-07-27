@@ -9,7 +9,7 @@
                     <input type="text" class="form-control" id="entertext" placeholder="Search something" v-model.trim="store.options.params.query " @keyup.enter="$emit ('titleSearch')"/>
                  </div>
                 <div class="form-group"></div>
-                <button type="button" class="btn btn-danger ms-4" @click="$emit ('titleSearch')" >Search</button>
+                <button type="button" class="btn btn-danger me-4" @click="$emit ('titleSearch')" >Search</button>
             </form>
         </div>
     </header>
