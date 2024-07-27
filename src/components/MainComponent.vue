@@ -16,12 +16,12 @@
             </div>
 
         <section id="section-down" class="d-flex">
-            <div id="section-down-left-text" class="text-light">
-                <h2>Enjoy on your TV.</h2>
-                <h4>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h4>
+            <div id="section-down-left-text" class="text-light ps-4">
+                <h2 class="pt-4">Enjoy on your TV.</h2>
+                <h6>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h6>
             </div>
-            <div>
-                <video id="section-down-video" src="../assets/video/netflix-lite.mov" autoplay loop muted playsinline></video>
+            <div class="">
+                <video class="ps-4 pe-4" id="section-down-video" src="../assets/video/netflix-lite.mov" autoplay loop muted playsinline></video>
             </div>
 
         </section>
@@ -92,6 +92,10 @@ main {
   align-items: center;
   color: white;
   text-align: center; 
+}
+
+#section-down-left-text{
+   background-color: $blackprimary
 }
 
 #section-down-video {
