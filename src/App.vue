@@ -1,6 +1,6 @@
 <template>
-  <HeaderComponent @titleSearch = "getData"/>
-  <MainComponent />
+  <HeaderComponent @titleSearch = "getData" />
+  <MainComponent @titleSearch = "getData" />
 </template>
 
 <script>
@@ -20,7 +20,7 @@ import FooterComponent from './components/FooterComponent.vue';
     },
     data() {
       return {
-        store
+        store,
       }
     },
     methods:{
@@ -45,6 +45,7 @@ import FooterComponent from './components/FooterComponent.vue';
       console.log("store", store);
       }
     },
+  
     created(){
       //this.getMovies();
       //this.getSeries();

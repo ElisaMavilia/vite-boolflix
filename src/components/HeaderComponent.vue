@@ -1,7 +1,7 @@
 <template>
     <header class="d-flex align-content-center align-items-center">
         <div id="left-header" class="ps-4">
-            <h2 class="text-uppercase">Boolflix</h2>
+            <h2 id="title" class="text-uppercase">Boolflix</h2>
         </div>
         <div id="right-header" >
             <form class="d-flex justify-content-between">
@@ -17,14 +17,13 @@
 
 <script>
 import { store } from '/src/store.js';
-    export default {
-        name:'HeaderComponent',
-        data(){
-            return {
-            store
-        }
-    }
-    }
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+};
 </script>
 
 <style lang="scss" scoped>
@@ -39,8 +38,16 @@ header{
     top: 0;
     left: 0;
     z-index: 3000;
-    border-bottom: 1px solid grey;
+    /* border-bottom: 1px solid grey; */
 
+#title {
+  font-family: 'Bebas Neue', sans-serif; 
+  color: #e50914; 
+  font-size: 1.8rem; 
+  letter-spacing: 2px; 
+  text-transform: uppercase; 
+  margin: 0; 
+}
 #rigth-header{
     width: 30%;
 }    
@@ -57,7 +64,8 @@ input{
 }
 
 .btn-danger{
-    font-weight: 500;
+    font-weight: 400;
+    background-color: $redboolfix;
 }
 }
 

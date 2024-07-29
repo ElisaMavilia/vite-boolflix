@@ -1,10 +1,10 @@
 <template>
-    <div class="container">
+    <div id="card-list" class="container">
         <div class="pb-4">
-            <h2 class="text-uppercase" v-if="store.movies.length> 0">Movies</h2>
+            <h2 class="text-uppercase " v-if="store.movies.length > 0">Movies</h2>
         </div>
         <div class="row">
-            <div class="col-12 col-md-6 col-lg-3" v-for="movies in store.movies" :key="movies.id">
+            <div class="col-12 col-md-6 col-lg-3 pt-3" v-for="movies in store.movies" :key="movies.id">
             <CardComponent :id="movies.id" :title="movies.title" :original="movies.original_title" :language="movies.original_language" :rating="movies.vote_average" :img="movies.poster_path" :plot="movies.overview"/>
         </div>
             </div>
@@ -43,8 +43,12 @@ import CardComponent from '../components/CardComponent.vue';
 @use '../assets/styles/partials/variables' as *;
 
 h2{
-    font-size: 2.5em;
+    font-size: 1.8rem;
     color: white;
+}
+
+#card-list{
+    padding-top: 150px;
 }
 
 </style>

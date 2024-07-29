@@ -8,7 +8,7 @@
                 
                     <div class="flip-card-back px-5 py-3">
                         <h5 class="card-title">{{ title || name }}</h5><br>
-                        <span class="card-text"><em>{{ original }}</em></span><br>
+                        <span class="card-text">Original title: {{ original }}</span><br>
                         <div class="flag pt-3">
                             <img :src="imgFlag" :alt="language + 'flag'">
                         </div><br>
@@ -108,12 +108,12 @@ import { store } from '/src/store.js';
   overflow-y: auto;
 }
 p{
-    font-size: 1em;
+    font-size: 0.5em;
     padding-top: 10px;
 }
 
-h5{
-    font-size: 1.5em;
+h5,.card-text{
+    font-size: 0.8em;
     font-weight: 600;
 }
    

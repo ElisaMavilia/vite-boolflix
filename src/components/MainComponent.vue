@@ -8,26 +8,25 @@
             <div id="section-up-text">
                 <h2 class="text-center text-light">Unlimited movies, TV shows and more.</h2>
                 <h4 class="text-center text-light">Watch anywhere. Cancel anytime.</h4>
-                <p class="text-center text-light">Ready to watch? Enter your email to create or restart your membership.</p>
-                <form class="d-flex justify-content-center">
-                    <input type="text" placeholder="Email address">
-                    <button type="button" class="btn btn-danger mx-4 " >Get Started</button>
-                </form>
+                <p class="text-center text-light">Ready to watch? Search a movie or a tv-show.</p>
+                <form class="d-flex justify-content-between">
+                <div class="form-group me-4">
+                    <input type="text" class="form-control" id="entertext" placeholder="Search something" v-model.trim="store.options.params.query " @keyup.enter="$emit ('titleSearch')"/>
+                 </div>
+                <div class="form-group"></div>
+                <button type="button" class="btn btn-danger me-4" @click="$emit ('titleSearch')" >Search</button>
+            </form>
             </div>
-
         <section id="section-down" class="d-flex">
             <div id="section-down-left-text" class="text-light ps-4">
-                <h2 class="pt-4">Enjoy on your TV.</h2>
-                <h6>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h6>
+                <h2 class="pt-4">Enjoy on your TV</h2>
+                <h6>Watch on Smart TVs, Playstation, Xbox, Chromecast,<br> Apple TV, Blu-ray players, and more.</h6>
             </div>
             <div class="">
                 <video class="ps-4 pe-4" id="section-down-video" src="../assets/video/netflix-lite.mov" autoplay loop muted playsinline></video>
             </div>
-
         </section>
-            
-        </section>
-     
+    </section>
     </main>
 </template>
 
@@ -41,9 +40,10 @@ import CardList from '../components/CardList.vue';
     },
         data(){
             return {
-            store
+            store,
         }
-    }
+    },
+
     }
 </script>
 
@@ -52,7 +52,7 @@ import CardList from '../components/CardList.vue';
 
 main {
   width: 100%;
-  height: calc(100% - 190px);
+ /*  height: calc(100% - 190px);  */
   background-color: $blackprimary;
 }
 
@@ -64,6 +64,7 @@ main {
   background-size: cover;
   background-position: center;
   border-bottom: 3px solid rgba(211, 211, 211, 0.398);
+  
 }
 
 #section-up::before {
@@ -98,6 +99,15 @@ main {
    background-color: $blackprimary
 }
 
+#section-down {
+  width: 100%;
+  padding-top: 50px;
+  background-color: $blackprimary;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 50px;
+}
+
 #section-down-video {
   width: 100%;
   height: 200px;
@@ -105,13 +115,15 @@ main {
   justify-content: center;
   align-items: center;
   background-color: $blackprimary;
+  margin-right: 180px;
 }
 
 #section-down-video video {
-  width: 30%; 
+  width: 15%; 
   max-width: 200px; 
   height: auto; 
   object-fit: cover;
+ 
 }
 
 </style>
